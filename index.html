@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="login.html" data-text="site.logo" aria-label="Admin login">P</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="pill" type="button" data-resume-download>Download PDF Resume</button>
+    </header>
+
+    <main>
+      <section class="hero section-shell">
+        <div class="hero-copy" data-align="textAlign.heroHeading">
+          <p class="eyebrow" data-text="hero.kicker">Portfolio</p>
+          <h1 data-align="textAlign.heroHeading">
+            <span data-text="hero.intro">I'm Your Name</span>
+            <strong data-text="hero.title">Your Professional Title</strong>
+          </h1>
+          <p data-text="hero.bio" data-align="textAlign.heroBio">Add a short introduction that explains your work, strengths, and the kind of projects you want visitors to notice.</p>
+        </div>
+        <div class="hero-media">
+          <img data-src="media.heroImage" src="assets/uploaded-reference.png" alt="Portfolio visual" />
+        </div>
+      </section>
+
+      <section class="contact-strip" aria-label="Quick contact" data-align="textAlign.contact">
+        <span data-text="contact.email">hello@example.com</span>
+        <span data-text="contact.phone">+00 0000 0000</span>
+        <span data-text="contact.website">www.yourwebsite.com</span>
+        <div class="socials" data-socials></div>
+      </section>
+
+      <section id="about" class="section-shell about section-numbered">
+        <div class="section-title">
+          <h2>About Me</h2>
+          <span>( 01 )</span>
+        </div>
+        <p data-text="about.text" data-align="textAlign.about">There are many variations of passages available, but this portfolio keeps the focus on confident storytelling, useful detail, and crisp presentation.</p>
+        <div class="stats" data-repeat="stats" data-align="textAlign.stats"></div>
+        <div class="language-row" data-repeat="languages" data-align="textAlign.languages"></div>
+      </section>
+
+      <section id="experience" class="section-shell section-numbered">
+        <div class="section-title">
+          <h2>Experience</h2>
+          <span>( 02 )</span>
+        </div>
+        <div class="timeline" data-repeat="experience"></div>
+      </section>
+
+      <section id="education" class="section-shell education section-numbered">
+        <div class="section-title">
+          <h2>Education & Skills</h2>
+          <span>( 03 )</span>
+        </div>
+        <div class="education-list" data-repeat="education"></div>
+        <div class="skill-grid" data-repeat="skills"></div>
+      </section>
+
+      <section id="work" class="section-shell works section-numbered">
+        <div class="section-title">
+          <h2>Latest Works</h2>
+          <span>( 04 )</span>
+        </div>
+        <div class="video-feature" data-video-block hidden>
+          <video data-video="media.video" controls></video>
+          <h3 data-text="media.videoCaption">Featured portfolio reel</h3>
+        </div>
+        <div class="work-grid" data-repeat="works"></div>
+      </section>
+
+      <section id="contact" class="section-shell contact section-numbered">
+        <div class="section-title">
+          <h2>Contact Me</h2>
+          <span>( 05 )</span>
+        </div>
+        <form class="contact-form" id="contactForm" data-align="textAlign.contact">
+          <input name="name" placeholder="Name *" required />
+          <input name="phone" placeholder="Phone *" required />
+          <input class="wide" name="email" type="email" placeholder="Email *" required />
+          <textarea class="wide" name="message" placeholder="Message *" required></textarea>
+          <button type="submit">Send Now</button>
+          <p class="form-status wide" id="contactStatus" aria-live="polite"></p>
+        </form>
+        <footer data-align="textAlign.contact">
+          <div class="footer-socials" data-socials></div>
+          <div>
+            <strong data-text="contact.email">hello@example.com</strong>
+            <strong data-text="contact.phone">+00 0000 0000</strong>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script src="site-data.js"></script>
+    <script src="site.js"></script>
+  </body>
+</html>

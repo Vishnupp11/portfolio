@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Admin</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-body">
+    <header class="admin-top">
+      <div>
+        <a class="brand" href="index.html" data-admin-logo>P</a>
+        <h1>Website Admin</h1>
+      </div>
+      <div class="admin-actions">
+        <a class="pill" href="index.html">View Website</a>
+        <button id="logoutAdmin" class="ghost-button">Logout</button>
+        <button id="resetSite" class="ghost-button">Reset</button>
+      </div>
+    </header>
+
+    <main class="admin-layout">
+      <aside class="admin-menu">
+        <button data-panel="identity" class="active">Identity</button>
+        <button data-panel="theme">Theme</button>
+        <button data-panel="typography">Typography / Fonts</button>
+        <button data-panel="media">Images & Video</button>
+        <button data-panel="about">About</button>
+        <button data-panel="experience">Experience</button>
+        <button data-panel="education">Education</button>
+        <button data-panel="works">Works</button>
+        <button data-panel="contact">Contact</button>
+        <button data-panel="messages">Messages</button>
+      </aside>
+
+      <section class="admin-panel active" id="panel-identity">
+        <h2>Identity</h2>
+        <div class="editor-grid">
+          <label>Logo letter<input data-field="site.logo" maxlength="2" /></label>
+          <p class="admin-note">The resume PDF is generated automatically from the edited website details.</p>
+          <label>Entire website font size (%)<input type="number" min="75" max="140" data-field="typography.globalScale" /></label>
+          <label>Small label<input data-field="hero.kicker" /></label>
+          <label>Portfolio label font size<input type="number" min="12" max="90" data-field="typography.heroKickerSize" /></label>
+          <label>Intro text<input data-field="hero.intro" /></label>
+          <label>Main title<input data-field="hero.title" /></label>
+          <label>Font type<select data-field="typography.font">
+            <option value="Inter, Arial, sans-serif">Inter / Clean</option>
+            <option value="Arial, Helvetica, sans-serif">Arial</option>
+            <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="'Times New Roman', Times, serif">Times</option>
+            <option value="'Courier New', monospace">Mono</option>
+          </select></label>
+          <label>Hero title font size<input type="number" min="34" max="96" data-field="typography.heroTitleSize" /></label>
+          <label>Hero bio font size<input type="number" min="13" max="28" data-field="typography.heroBioSize" /></label>
+          <label>Hero heading alignment<select data-field="textAlign.heroHeading" data-align-select></select></label>
+          <label>Hero bio alignment<select data-field="textAlign.heroBio" data-align-select></select></label>
+          <label class="full">Hero bio<textarea data-field="hero.bio"></textarea></label>
+        </div>
+      </section>
+
+      <section class="admin-panel" id="panel-theme">
+        <h2>Theme</h2>
+        <div class="editor-grid">
+          <label>Accent color<input type="color" data-field="theme.accent" /></label>
+          <label>Ink color<input type="color" data-field="theme.ink" /></label>
+          <label>Paper color<input type="color" data-field="theme.paper" /></label>
+          <label>Soft section color<input type="color" data-field="theme.soft" /></label>
+          <label>Font type<select data-field="typography.font">
+            <option value="Inter, Arial, sans-serif">Inter / Clean</option>
+            <option value="Arial, Helvetica, sans-serif">Arial</option>
+            <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="'Times New Roman', Times, serif">Times</option>
+            <option value="'Courier New', monospace">Mono</option>
+          </select></label>
+          <label>Entire website font size (%)<input type="number" min="75" max="140" data-field="typography.globalScale" /></label>
+          <label>Base text size<input type="number" min="12" max="24" data-field="typography.baseSize" /></label>
+          <label>Portfolio label size<input type="number" min="12" max="90" data-field="typography.heroKickerSize" /></label>
+          <label>Hero title size<input type="number" min="34" max="96" data-field="typography.heroTitleSize" /></label>
+          <label>Section title size<input type="number" min="24" max="58" data-field="typography.sectionTitleSize" /></label>
+        </div>
+      </section>
+
+      <section class="admin-panel" id="panel-typography">
+        <h2>Typography</h2>
+        <div class="editor-grid">
+          <label>Font type<select data-field="typography.font">
+            <option value="Inter, Arial, sans-serif">Inter / Clean</option>
+            <option value="Arial, Helvetica, sans-serif">Arial</option>
+            <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="'Times New Roman', Times, serif">Times</option>
+            <option value="'Courier New', monospace">Mono</option>
+          </select></label>
+          <label>Entire website font size (%)<input type="number" min="75" max="140" data-field="typography.globalScale" /></label>
+          <label>Base text size<input type="number" min="12" max="24" data-field="typography.baseSize" /></label>
+          <label>Small text size<input type="number" min="10" max="20" data-field="typography.smallSize" /></label>
+          <label>Portfolio label size<input type="number" min="12" max="90" data-field="typography.heroKickerSize" /></label>
+          <label>Hero title size<input type="number" min="34" max="96" data-field="typography.heroTitleSize" /></label>
+          <label>Hero bio size<input type="number" min="13" max="28" data-field="typography.heroBioSize" /></label>
+          <label>Section title size<input type="number" min="24" max="58" data-field="typography.sectionTitleSize" /></label>
+          <label>Card title size<input type="number" min="13" max="28" data-field="typography.cardTitleSize" /></label>
+        </div>
+      </section>
+
+      <section class="admin-panel" id="panel-media">
+        <h2>Images & Video</h2>
+        <div class="media-admin">
+          <label>Hero image<input type="file" accept="image/*" data-upload="media.heroImage" /></label>
+          <img class="admin-preview" data-preview="media.heroImage" alt="Hero preview" />
+          <label>Featured video<input type="file" accept="video/*" data-upload="media.video" /></label>
+          <video class="admin-preview" data-preview-video="media.video" controls></video>
+          <label class="full">Video caption<input data-field="media.videoCaption" /></label>
+        </div>
+      </section>
+
+      <section class="admin-panel" id="panel-about">
+        <h2>About</h2>
+        <label>Font type<select data-field="typography.font">
+          <option value="Inter, Arial, sans-serif">Inter / Clean</option>
+          <option value="Arial, Helvetica, sans-serif">Arial</option>
+          <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="'Times New Roman', Times, serif">Times</option>
+          <option value="'Courier New', monospace">Mono</option>
+        </select></label>
+        <label>About font size<input type="number" min="12" max="28" data-field="typography.aboutSize" /></label>
+        <label>About text alignment<select data-field="textAlign.about" data-align-select></select></label>
+        <label class="full">About text<textarea data-field="about.text"></textarea></label>
+        <h3>Stats</h3>
+        <label>Stats alignment<select data-field="textAlign.stats" data-align-select></select></label>
+        <div data-list-editor="stats"></div>
+        <h3>Languages</h3>
+        <label>Languages alignment<select data-field="textAlign.languages" data-align-select></select></label>
+        <div data-simple-list="languages"></div>
+      </section>
+
+      <section class="admin-panel" id="panel-experience">
+        <h2>Experience</h2>
+        <label>Font type<select data-field="typography.font">
+          <option value="Inter, Arial, sans-serif">Inter / Clean</option>
+          <option value="Arial, Helvetica, sans-serif">Arial</option>
+          <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="'Times New Roman', Times, serif">Times</option>
+          <option value="'Courier New', monospace">Mono</option>
+        </select></label>
+        <label>Experience font size<input type="number" min="12" max="28" data-field="typography.experienceSize" /></label>
+        <label>Experience description alignment<select data-field="textAlign.experience" data-align-select></select></label>
+        <div data-list-editor="experience"></div>
+      </section>
+
+      <section class="admin-panel" id="panel-education">
+        <h2>Education & Skills</h2>
+        <h3>Education</h3>
+        <label>Font type<select data-field="typography.font">
+          <option value="Inter, Arial, sans-serif">Inter / Clean</option>
+          <option value="Arial, Helvetica, sans-serif">Arial</option>
+          <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="'Times New Roman', Times, serif">Times</option>
+          <option value="'Courier New', monospace">Mono</option>
+        </select></label>
+        <label>Education font size<input type="number" min="12" max="28" data-field="typography.educationSize" /></label>
+        <label>Education description alignment<select data-field="textAlign.education" data-align-select></select></label>
+        <div data-list-editor="education"></div>
+        <h3>Skills</h3>
+        <label>Skills alignment<select data-field="textAlign.skills" data-align-select></select></label>
+        <div data-list-editor="skills"></div>
+      </section>
+
+      <section class="admin-panel" id="panel-works">
+        <h2>Latest Works</h2>
+        <label>Font type<select data-field="typography.font">
+          <option value="Inter, Arial, sans-serif">Inter / Clean</option>
+          <option value="Arial, Helvetica, sans-serif">Arial</option>
+          <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="'Times New Roman', Times, serif">Times</option>
+          <option value="'Courier New', monospace">Mono</option>
+        </select></label>
+        <label>Work font size<input type="number" min="12" max="28" data-field="typography.workSize" /></label>
+        <label>Work text alignment<select data-field="textAlign.works" data-align-select></select></label>
+        <div data-list-editor="works"></div>
+      </section>
+
+      <section class="admin-panel" id="panel-contact">
+        <h2>Contact</h2>
+        <div class="editor-grid">
+          <label>Font type<select data-field="typography.font">
+            <option value="Inter, Arial, sans-serif">Inter / Clean</option>
+            <option value="Arial, Helvetica, sans-serif">Arial</option>
+            <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="'Times New Roman', Times, serif">Times</option>
+            <option value="'Courier New', monospace">Mono</option>
+          </select></label>
+          <label>Contact font size<input type="number" min="12" max="28" data-field="typography.contactSize" /></label>
+          <label>Contact text alignment<select data-field="textAlign.contact" data-align-select></select></label>
+          <label>Email<input data-field="contact.email" /></label>
+          <label>Phone<input data-field="contact.phone" /></label>
+          <label>Website<input data-field="contact.website" /></label>
+          <label class="full">Social links, separated by commas<input data-field="contact.socialsText" /></label>
+        </div>
+        <h3>Social Buttons</h3>
+        <div data-list-editor="socials"></div>
+      </section>
+
+      <section class="admin-panel" id="panel-messages">
+        <h2>Messages</h2>
+        <div class="message-list" id="messageList"></div>
+        <button id="clearMessages" class="ghost-button" type="button">Clear Messages</button>
+      </section>
+    </main>
+
+    <div class="save-toast" id="saveToast">Saved</div>
+    <script src="site-data.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
